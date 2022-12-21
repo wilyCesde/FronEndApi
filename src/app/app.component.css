@@ -3,9 +3,10 @@ table {
     border: 1px solid gray;
     text-align: center;
     margin-left: 10px;
+    margin-top: 10px;
 }
 
-.mat-mdc-form-field {
+.mat-form-field {
     font-size: 14px;
     width: 100%;
 }
@@ -28,4 +29,15 @@ th {
 
 iframe {
     width: 100%;
+    border: 1px solid rgb(204, 175, 231);
+    margin-bottom: 10px;
+}
+
+.mat-toolbar {
+    margin-top: 10px;
+}
+
+.mat-toolbar-row button {
+    border-radius: 16px;
+    margin-left: 16px;
 }
