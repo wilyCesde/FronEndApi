@@ -1,8 +1,27 @@
 table {
-    width: 100%;
+    width: 98%;
+    border: 1px solid gray;
+    text-align: center;
+    margin-left: 10px;
 }
 
 .mat-mdc-form-field {
     font-size: 14px;
     width: 100%;
+}
+
+td,
+th {
+    width: 25%;
+    border: 1px solid rgb(243, 237, 237);
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.mat-header-cell {
+    text-align: center;
+    font-size: 24px;
+    color: rgb(238, 60, 134);
 }
