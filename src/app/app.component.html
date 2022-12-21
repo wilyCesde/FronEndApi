@@ -1,7 +1,17 @@
 <div class="container">
-    <!-- agregar toolbar -->
+    <mat-toolbar>
+        <button mat-button (click)="fijar(0)">OpenStreetMap</button>
+        <button mat-button (click)="fijar(1)">Google Maps</button>
+        <button mat-button (click)="fijar(2)">Microsoft Maps</button>
+    </mat-toolbar>
+    <iframe [src]="urlSegura">
+  </iframe>
+</div>
 
-    <!-- agregar toolbar -->
+
+
+<div class="container">
+
     <mat-form-field>
         <mat-label>Filtrar</mat-label>
         <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input />

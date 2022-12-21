@@ -25,3 +25,7 @@ th {
     font-size: 24px;
     color: rgb(238, 60, 134);
 }
+
+iframe {
+    width: 100%;
+}
