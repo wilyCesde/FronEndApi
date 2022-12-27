@@ -1,8 +1,8 @@
 export interface Empleado {
-  IdEmpleado: number;
-  NombreCompleto: string;
-  IdDepartamento: number;
-  NombreDepartamento?: string;
-  Sueldo: number;
-  FechaContrato: string;
+  idEmpleado: number;
+  nombreCompleto: string;
+  idDepartamento: number;
+  nombreDepartamento?: string;
+  sueldo: number;
+  fechaContrato: string;
 }

@@ -1,25 +1,52 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild, OnInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+//implementar interface
+import { Empleado } from './Interfaces/Empleado';
+import { EmpleadoService } from './Services/Empleado.service';
+//iportar el servicio
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements AfterViewInit {
-  title = 'FronEndApi';
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+export class AppComponent implements AfterViewInit, OnInit {
+  //title = 'FronEndApi';
+  displayedColumns: string[] = [
+    'NombreCompleto',
+    'Departamento',
+    'Sueldo',
+    'FechaContrato',
+    'Acciones',
+  ];
+
+  dataSource = new MatTableDataSource<Empleado>();
+
+  constructor(private empleadoService: EmpleadoService) {}
+
+  ngOnInit(): void {
+    this.mostrarEmpleado();
+  }
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
   }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  mostrarEmpleado() {
+    this.empleadoService.getList().subscribe({
+      next: (dataResponse) => {
+        console.log(dataResponse);
+        this.dataSource.data = dataResponse;
+      },
+      error: (e) => {},
+    });
   }
 }
 
