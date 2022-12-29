@@ -13,9 +13,34 @@
                     <input matInput formControlName="nombreCompleto" autocomplete="off" />
                 </mat-form-field>
             </mat-grid-tile>
-            <mat-grid-tile>1</mat-grid-tile>
-            <mat-grid-tile>1</mat-grid-tile>
-            <mat-grid-tile>1</mat-grid-tile>
+
+            <mat-grid-tile>
+                <!--     listar los departamentos -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Departamento</mat-label>
+                    <mat-select formControlName="idDepartamento" autocomplete="off">
+                        <mat-option *ngFor="let item of listaDepartamento" [value]="item.idDepartamento">
+                            {{ item.nombre }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Sueldo</mat-label>
+                    <input matInput formControlName="sueldo" autocomplete="off" type="number" />
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <mat-form-field color="accent" appearance="outline">
+                    <mat-label>Fecha Contrato</mat-label>
+                    <input matInput [matDatepicker]="picker2" formControlName="fechaContrato" />
+                    <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2 color="primary"></mat-datepicker>
+                </mat-form-field>
+            </mat-grid-tile>
         </mat-grid-list>
     </form>
 </div>

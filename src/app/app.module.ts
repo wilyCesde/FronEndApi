@@ -31,7 +31,8 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatButtonModule } from '@angular/material/button';
 import { DialogsComponent } from './dialogs/dialogs.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
+//para poder usar las fechas ademas de picker
+import { MatNativeDateModule } from '@angular/material/core';
 @NgModule({
   declarations: [AppComponent, DialogsComponent],
   imports: [
@@ -64,6 +65,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     HttpClientModule,
     MatSnackBarModule,
     ReactiveFormsModule,
+    MatNativeDateModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
