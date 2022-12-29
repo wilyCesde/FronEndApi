@@ -1,0 +1,25 @@
+<!-- debemo remplazar yeditar los valores del html optenidos -->
+
+<h1 mat-dialog-title>{{ tituloAccion }}Empleado</h1>
+<div mat-dialog-content>
+    <!-- impportamos formularios reactivos appModule -->
+    <form [formGroup]="formEmpleado">
+        <!-- configurar las grillas para ordenar es comp  -->
+        <!-- dentro usamos formField-->
+        <mat-grid-list cols="1" rowHeight="80px">
+            <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                    <mat-label>Nombre Completo</mat-label>
+                    <input matInput formControlName="nombreCompleto" autocomplete="off" />
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>1</mat-grid-tile>
+            <mat-grid-tile>1</mat-grid-tile>
+            <mat-grid-tile>1</mat-grid-tile>
+        </mat-grid-list>
+    </form>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+</div>

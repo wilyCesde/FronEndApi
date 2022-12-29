@@ -23,21 +23,7 @@ th {
 
 .mat-header-cell {
     text-align: center;
-    font-size: 24px;
+    align-items: center;
     color: rgb(238, 60, 134);
-}
-
-iframe {
-    width: 100%;
-    border: 1px solid rgb(204, 175, 231);
-    margin-bottom: 10px;
-}
-
-.mat-toolbar {
-    margin-top: 10px;
-}
-
-.mat-toolbar-row button {
-    border-radius: 16px;
-    margin-left: 16px;
+    align-content: center;
 }
