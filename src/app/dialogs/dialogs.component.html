@@ -6,7 +6,7 @@
     <form [formGroup]="formEmpleado">
         <!-- configurar las grillas para ordenar es comp  -->
         <!-- dentro usamos formField-->
-        <mat-grid-list cols="1" rowHeight="80px">
+        <mat-grid-list cols="" rowHeight="80px">
             <mat-grid-tile>
                 <mat-form-field appearance="outline">
                     <mat-label>Nombre Completo</mat-label>
@@ -18,7 +18,7 @@
                 <!--     listar los departamentos -->
                 <mat-form-field appearance="outline">
                     <mat-label>Departamento</mat-label>
-                    <mat-select formControlName="idDepartamento" autocomplete="off">
+                    <mat-select formControlName="idDepartamento">
                         <mat-option *ngFor="let item of listaDepartamento" [value]="item.idDepartamento">
                             {{ item.nombre }}
                         </mat-option>
@@ -32,7 +32,7 @@
                     <input matInput formControlName="sueldo" autocomplete="off" type="number" />
                 </mat-form-field>
             </mat-grid-tile>
-
+            <!--    agregamosel modal para fechas -->
             <mat-grid-tile>
                 <mat-form-field color="accent" appearance="outline">
                     <mat-label>Fecha Contrato</mat-label>
@@ -46,5 +46,8 @@
 </div>
 
 <div mat-dialog-actions>
-    <button mat-button mat-dialog-close>Close</button>
+    <button mat-raised-button mat-dialog-close color="warn">Volver</button>
+    <button mat-raised-button mat-dialog-close color="primary" (click)="addEditEmpleado()" [disabled]="formEmpleado.invalid">
+    {{ botonAccion }}
+  </button>
 </div>
