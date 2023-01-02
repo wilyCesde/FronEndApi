@@ -1,9 +1,4 @@
-table {
-    width: 98%;
-    border: 1px solid gray;
-    text-align: center;
-    margin-top: 10px;
-}
+
 
 .mat-form-field {
     font-size: 16px;
@@ -14,6 +9,10 @@ td,
 th {
     width: 25%;
     border: 1px solid rgb(219, 204, 204);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .example-spacer {
@@ -21,13 +20,40 @@ th {
 }
 
 .mat-header-cell {
-    text-align: center;
-    align-items: center;
-    color: rgb(238, 60, 134);
-    align-content: center;
-    font-size: 15px;
+  font-family: "Roboto", sans-serif; /* fuente elegante y legible */
+  font-size: 1.5em; /* tamaño de la fuente */
+  text-align: center; /* alineación del texto */
+  color: #6190e8; /* color del texto */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); /* sombra del texto */
 }
 
 .example-button-row {
-    display: flex;
+  display: flex; /* establecemos un display flex para poder alinear los elementos */
+  justify-content: center; /* centramos los elementos */
+}
+.example-button-row button {
+  margin: 0 10px; /* añade un margen de 10px a derecha e izquierda de cada botón */
+}
+/* css de chat bot parael encabezado */
+h1,
+button {
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+button {
+  background: linear-gradient(to right, #6190e8, #a7bfe8);
+  color: white;
+  transition: all 0.3s ease-in-out;
+
+}
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+h1 {
+  font-family: "Roboto", sans-serif; /* fuente elegante y legible */
+  font-size: 2em; /* tamaño de la fuente */
+  text-align: center; /* alineación del texto */
+  color: #6190e8; /* color del texto */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); /* sombra del texto */
 }
