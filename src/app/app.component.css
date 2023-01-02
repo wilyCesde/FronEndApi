@@ -1,5 +1,11 @@
 
-
+h1 {
+  font-family: "Roboto", sans-serif; /* fuente elegante y legible */
+  font-size: 2em; /* tamaño de la fuente */
+  text-align: center; /* alineación del texto */
+  color: #6190e8; /* color del texto */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); /* sombra del texto */
+}
 .mat-form-field {
     font-size: 16px;
     width: 100%;
@@ -13,6 +19,7 @@ th {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background: linear-gradient(to bottom, #ffffff, #e0e0e0);
     font-family: 'Open Sans', sans-serif;
+    padding: 8px
 }
 
 .example-spacer {
@@ -50,10 +57,4 @@ button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
-h1 {
-  font-family: "Roboto", sans-serif; /* fuente elegante y legible */
-  font-size: 2em; /* tamaño de la fuente */
-  text-align: center; /* alineación del texto */
-  color: #6190e8; /* color del texto */
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); /* sombra del texto */
-}
+
