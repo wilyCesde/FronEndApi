@@ -58,3 +58,7 @@ button:hover {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
+tr:nth-child(even) {
+  /* estilos para filas pares (es decir, con un número de índice par) */
+  background-color: #f2f2f2; /* cambia el color de fondo a gris claro */
+}
