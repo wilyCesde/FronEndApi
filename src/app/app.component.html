@@ -13,7 +13,7 @@
       #input
     />
   </mat-form-field>
-  <table mat-table class="mat-table-responsive" [dataSource]="dataSource">
+  <table mat-table [dataSource]="dataSource">
     <!-- Position Column -->
     <ng-container matColumnDef="NombreCompleto">
       <th mat-header-cell *matHeaderCellDef>Nombre Completo</th>
@@ -66,4 +66,4 @@
     aria-label="Select page of periodic elements"
   >
   </mat-paginator>
-</div>
+
