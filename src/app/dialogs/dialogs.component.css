@@ -1,0 +1,49 @@
+mat-form-field {
+  font-size: 1em;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Roboto", sans-serif;
+  color: #b3b3b3;
+  transition: all 0.3s ease-in-out;
+}
+mat-form-field.mat-focused {
+  color: #6190e8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+h1,
+mat-raised-button {
+  color: #6190e8;
+}
+h1,
+mat-form-field,
+mat-select,
+mat-datepicker {
+  font-family: "Roboto", sans-serif;
+}
+h1,
+mat-raised-button {
+  color: #6190e8;
+}
+
+mat-form-field,
+mat-select,
+mat-datepicker {
+  color: #b3b3b3;
+}
+
+mat-form-field.mat-focused,
+mat-select.mat-focused,
+mat-datepicker.mat-focused {
+  color: #6190e8;
+}
+mat-form-field,
+mat-select,
+mat-datepicker {
+  transition: all 0.3s ease-in-out;
+}
+
+mat-form-field.mat-focused,
+mat-select.mat-focused,
+mat-datepicker.mat-focused {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
