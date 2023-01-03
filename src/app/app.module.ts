@@ -33,8 +33,9 @@ import { DialogsComponent } from './dialogs/dialogs.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 //para poder usar las fechas ademas de picker
 import { MatNativeDateModule } from '@angular/material/core';
+import { DialogoDeleteComponent } from './dialogs/dialogo-delete/dialogo-delete.component';
 @NgModule({
-  declarations: [AppComponent, DialogsComponent],
+  declarations: [AppComponent, DialogsComponent, DialogoDeleteComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

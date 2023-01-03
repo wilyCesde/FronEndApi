@@ -5,6 +5,7 @@ mat-form-field {
   font-family: "Roboto", sans-serif;
   color: #b3b3b3;
   transition: all 0.3s ease-in-out;
+  width: 100%;
 }
 mat-form-field.mat-focused {
   color: #6190e8;
@@ -42,8 +43,3 @@ mat-datepicker {
   transition: all 0.3s ease-in-out;
 }
 
-mat-form-field.mat-focused,
-mat-select.mat-focused,
-mat-datepicker.mat-focused {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}

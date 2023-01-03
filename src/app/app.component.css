@@ -1,4 +1,6 @@
-
+table {
+  width: 100%;
+}
 h1 {
   font-family: "Roboto", sans-serif; /* fuente elegante y legible */
   font-size: 2em; /* tamaño de la fuente */

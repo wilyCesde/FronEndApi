@@ -53,7 +53,35 @@ export class AppComponent implements AfterViewInit, OnInit {
       error: (e) => {},
     });
   }
+  /*   mensaje  */
   dialogoNuevoEmpleado() {
-    this.dialog.open(DialogsComponent);
+    this.dialog
+      .open(DialogsComponent, {
+        disableClose: true,
+        width: '350px',
+      })
+      .afterClosed()
+      .subscribe((resultado) => {
+        if (resultado === 'creado') {
+          this.mostrarEmpleado();
+        }
+      });
+  }
+
+  // metodo para editar
+
+  dialogoEditarEmpleado(dataEmpleado: Empleado) {
+    this.dialog
+      .open(DialogsComponent, {
+        disableClose: true,
+        width: '350px',
+        data: dataEmpleado,
+      })
+      .afterClosed()
+      .subscribe((resultado) => {
+        if (resultado === 'editado') {
+          this.mostrarEmpleado();
+        }
+      });
   }
 }
