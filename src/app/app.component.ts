@@ -7,7 +7,11 @@ import { EmpleadoService } from './Services/Empleado.service';
 //importar los dialogos
 import { MatDialog } from '@angular/material/dialog';
 //importamos
-import { DialogsComponent } from './dialogs/dialogs.component';
+import { DialogsComponent } from './dialogs/dialog-add-edit/dialogs.component';
+
+//importamos para trabajar con las alertas de eliminar un empleado
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { DialogoDeleteComponent } from './dialogs/dialogo-delete/dialogo-delete.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -25,9 +29,12 @@ export class AppComponent implements AfterViewInit, OnInit {
 
   dataSource = new MatTableDataSource<Empleado>();
 
+  //dentro del contructor creamos la variable private _snackBar para los mensajes
+
   constructor(
     private empleadoService: EmpleadoService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private _snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -81,6 +88,38 @@ export class AppComponent implements AfterViewInit, OnInit {
       .subscribe((resultado) => {
         if (resultado === 'editado') {
           this.mostrarEmpleado();
+        }
+      });
+  }
+
+  //acac voy pegar metodo para  eliminar o la alerta
+
+  mostrarAlerta(msg: string, accion: string) {
+    this._snackBar.open(msg, accion, {
+      horizontalPosition: 'end',
+      verticalPosition: 'top',
+      duration: 3000,
+    });
+  }
+
+  // crear metodo para poder eliinar el empleado
+
+  dialogoEliminarEmpleado(dataEmpleado: Empleado) {
+    this.dialog
+      .open(DialogoDeleteComponent, {
+        disableClose: true,
+        data: dataEmpleado,
+      })
+      .afterClosed()
+      .subscribe((resultado) => {
+        if (resultado === 'eliminar') {
+          this.empleadoService.delete(dataEmpleado.idEmpleado).subscribe({
+            next: (data) => {
+              this.mostrarAlerta('Empleado ue eliminado', 'Listo');
+              this.mostrarEmpleado();
+            },
+            error: (e) => {console.log(e)},
+          });
         }
       });
   }

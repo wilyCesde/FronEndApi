@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Lista de emplados</h1>
+  <h1>Lista de empleados</h1>
   <button mat-raised-button color="primary" (click)="dialogoNuevoEmpleado()">
     Nuevo Empleado
   </button>
@@ -53,7 +53,12 @@
           >
             <mat-icon>edit</mat-icon>
           </button>
-          <button mat-button color="warn" matTooltip="Eliminar elemento">
+          <button
+            mat-button
+            color="warn"
+            matTooltip="Eliminar elemento"
+            (click)="dialogoEliminarEmpleado(element)"
+          >
             <mat-icon>delete</mat-icon>
           </button>
         </div>

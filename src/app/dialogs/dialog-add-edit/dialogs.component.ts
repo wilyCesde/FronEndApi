@@ -12,11 +12,11 @@ import { MAT_DATE_FORMATS } from '@angular/material/core';
 //Libreria para moment
 import * as moment from 'moment';
 // importar la interface
-import { Departamento } from '../Interfaces/Departamento';
-import { Empleado } from '../Interfaces/Empleado';
+import { Departamento } from '../../Interfaces/Departamento';
+import { Empleado } from '../../Interfaces/Empleado';
 //importar los servicios
-import { DepartamentoService } from '../Services/Departamento.service';
-import { EmpleadoService } from '../Services/Empleado.service';
+import { DepartamentoService } from '../../Services/Departamento.service';
+import { EmpleadoService } from '../../Services/Empleado.service';
 
 //Exportar el formato de las fechas
 export const MY_DATE_FORMATS = {
@@ -138,5 +138,5 @@ export class DialogsComponent implements OnInit {
       this.botonAccion = 'Actualizar';
     }
   }
-  
+
 }
